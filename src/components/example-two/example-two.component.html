@@ -1,0 +1,16 @@
+<div class="grid grid-cols-3 gap-8">
+  <div class="flex flex-col">
+    {{sum}}
+  </div>
+  <div class="flex flex-col">
+    {{sum$ | async}}
+  </div>
+  <div class="flex flex-col">
+    {{sumSignal()}}
+  </div>
+</div>
+<div class="w-full flex flex-row gap-2 items-center justify-center">
+  <button class="btn" (click)="setA()">increase A</button>
+  <button class="btn" (click)="setB()">increase B</button>
+  <button class="btn" (click)="triggerCdr()">trigger change detection</button>
+</div>

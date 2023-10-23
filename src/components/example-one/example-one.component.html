@@ -1,0 +1,20 @@
+<div class="grid grid-cols-3 gap-8">
+  <div class="flex flex-col">
+    {{loading}}
+    <button class="btn w-auto" (click)="setLoading()">
+      set loading
+    </button>
+  </div>
+  <div class="flex flex-col">
+    {{loading$ | async}}
+    <button class="btn" (click)="setSubject()">
+      set subject
+    </button>
+  </div>
+  <div class="flex flex-col">
+    {{loadingSignal()}}
+    <button class="btn" (click)="setSignal()">
+      set signal
+    </button>
+  </div>
+</div>
